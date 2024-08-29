@@ -1,10 +1,7 @@
-// Online C++ compiler to run C++ program online
 #include <iostream>
 #include <stdio.h>
-#inlude "training_alg.hpp"
-#define not_found -1
 
-
+#inlude "function.hpp"
 
 int main() 
 {
