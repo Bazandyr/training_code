@@ -1,31 +1,26 @@
 #include <iostream>
 #include <stdio.h>
 
+#include "functions.hpp"
+
 #define not_found -1
 
-int linear_search (int* massive, int size, int search_elem)
+//Selection sorting
+int selection_sort (int* massive, int size)
 {
-    int ans = not_found;
+    int smallest;
+    int swap;
     for (int i = 0; i < size; i++)
     {
-        if(massive[i] == search_elem)
+        smallest = i;
+        for (int j = i + 1; j < size; j++)
         {
-            ans = i;
-            break;
+            if (massive[j] < massive[smallest])
+                smallest = j;
         }
+        swap = massive[i];
+        massive[i] = massive[smallest];
+        massive[smallest] = swap;
     }
-    return ans;
-}
-
-int sential_linear_search(int* massive, int size, int search_elem)
-{
-    int last = massive[size - 1];
-    massive[size - 1] = search_elem;
-    int i = 0;
-    while (massive[i] != search_elem)
-        i++;
-    massive[size - 1] = last;
-    if (i < size || massive[size] == search_elem)
-        return i;
-    return not_found;
+    return 0;
 }
