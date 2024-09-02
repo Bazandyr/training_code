@@ -37,6 +37,17 @@ int main()
         ans = binary_linear_recurs_search (a, sizeof(a) / sizeof(a[0]), 3);
         printf("index=%d \n", ans); 
         ans = 0;
+
+    //Intersection sorting
+        int b[] = {2, 9, 5, 10, 4, 8, 3, 11, 7};      
+        ans = intersection_sort (b, sizeof(b) / sizeof(b[0]));
+        for (int i = 0; i < sizeof(b) / sizeof(b[0]); i++)
+            printf("%d \n", b[i]);
     
+    //Merge sorting
+        int c[] = {2, 9, 5, 10, 4, 8, 3, 11, 7};      
+        ans = merge_sort (c, 0, sizeof(c) / sizeof(c[0]) - 1);
+        for (int i = 0; i < sizeof(c) / sizeof(c[0]); i++)
+            printf("%d \n", c[i]);
     return 0;
 }

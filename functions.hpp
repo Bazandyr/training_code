@@ -13,3 +13,7 @@ int binary_linear_recurs_search (int* massive, int size, int search_elem);
 
 //Sorting
 int selection_sort (int* massive, int size);
+
+int intersection_sort(int* massive, int size);
+
+int merge_sort(int* massive, int p, int size);
