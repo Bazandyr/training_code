@@ -49,5 +49,11 @@ int main()
         ans = merge_sort (c, 0, sizeof(c) / sizeof(c[0]) - 1);
         for (int i = 0; i < sizeof(c) / sizeof(c[0]); i++)
             printf("%d \n", c[i]);
+
+    //Quick sorting
+        int d[] = {2, 9, 5, 10, 4, 8, 3, 11, 7};      
+        quick_sort (d, 0, sizeof(d) / sizeof(d[0]) - 1);
+        for (int i = 0; i < sizeof(d) / sizeof(d[0]); i++)
+            printf("%d \n", d[i]);
     return 0;
 }

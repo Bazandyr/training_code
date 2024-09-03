@@ -101,3 +101,36 @@ int merge_sort(int* massive, int p, int size)
     }
     return 0;
 }
+
+//partition fuction
+int partition_func(int* massive, int p, int size)
+{
+    int q = p;
+    int swap;
+    for (int u = p; u < size; u++)
+    {
+        if(massive[u] <= massive[size])
+        {
+            swap = massive[q];
+            massive[q] = massive[u];
+            massive[u] = swap;
+            q++;
+        }
+    }
+    swap = massive[q];
+    massive[q] = massive[size];
+    massive[size] = swap;
+    return q;
+}
+
+//Quick sorting
+int quick_sort(int* massive, int p, int size)
+{
+    if (p < size)
+    {
+        int q = partition_func(massive, p, size);
+        quick_sort(massive, p, q - 1);
+        quick_sort(massive, (q + 1), size);
+    }
+    return 0;
+}

@@ -17,3 +17,5 @@ int selection_sort (int* massive, int size);
 int intersection_sort(int* massive, int size);
 
 int merge_sort(int* massive, int p, int size);
+
+int quick_sort(int* massive, int p, int size);
